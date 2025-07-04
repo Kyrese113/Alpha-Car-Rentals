@@ -4,21 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Alpha Majestic Car Rentals</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#10b981', // Teal
+            coral: '#f97316',
+            golden: '#facc15',
+          },
+          fontFamily: {
+            tropical: ['Poppins', 'sans‑serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-blue-100 to-white min-h-screen flex items-center justify-center">
-  <div class="bg-white p-10 rounded-2xl shadow-2xl text-center max-w-md border-t-8 border-blue-600">
-    <div class="mb-4">
-      <svg class="mx-auto h-16 w-16 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" strokeLinejoin="round">
-        <path d="M9 12l2 2l4 -4" />
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-    </div>
-    <h1 class="text-3xl font-extrabold text-blue-700 mb-2">Thank You!</h1>
-    <p class="text-gray-700 text-lg mb-6">Your message has been received. We'll reach out soon to confirm your booking with Alpha Majestic Car Rentals.</p>
-    <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-      Back to Home
-    </a>
+<body class="font-tropical bg-gradient-to-br from-teal-500 via-coral to-golden min-h-screen flex items-center justify-center px-4">
+  <div class="bg-white rounded-3xl shadow-2xl p-10 max-w-lg w-full text-center">
+    <svg class="mx-auto h-20 w-20 text-primary mb-6" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 12l2 2l4 -4" />
+      <circle cx="12" cy="12" r="10" />
+    </svg>
+    <h1 class="text-4xl font-extrabold text-primary mb-4">Thank You!</h1>
+    <p class="text-gray-700 text-lg mb-8">We’ve received your booking request and will get back to you shortly.<br>Ready to hit the road with Alpha Majestic!</p>
+    <a href="index.html" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">Back to Home</a>
   </div>
 </body>
 </html>
