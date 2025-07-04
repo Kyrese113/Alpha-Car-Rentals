@@ -10,7 +10,7 @@
       theme: {
         extend: {
           colors: {
-            primary: '#10b981', // Teal for tropical feel
+            primary: '#10b981',
             coral: '#f97316',
             golden: '#facc15',
           },
@@ -22,13 +22,96 @@
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
-  <!-- Success Overlay -->
+<body class="font-tropical bg-white text-gray-800">
+
+<!-- Navbar -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="#" class="text-2xl font-extrabold text-primary">Alpha Majestic</a>
+    <nav class="space-x-6 hidden md:flex font-medium">
+      <a href="#about" class="hover:text-primary">About</a>
+      <a href="#fleet" class="hover:text-primary">Fleet</a>
+      <a href="#booking" class="hover:text-primary">Booking</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1603981196314-0dcea8209466?auto=format&fit=crop&w=1600&q=80');">
+  <div class="bg-black bg-opacity-50 p-10 rounded-xl text-center text-white max-w-2xl">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Cruise Port-of-Spain in Style</h1>
+    <p class="text-lg mb-6">Book your Nissan Tiida today with Alpha Majestic Car Rentals</p>
+    <a href="#booking" class="bg-primary hover:bg-teal-700 transition px-8 py-3 rounded-full font-semibold">Book Now</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-gradient-to-br from-yellow-50 via-white to-teal-50">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-primary mb-4">About Us</h2>
+    <p class="text-lg">Alpha Majestic Car Rentals is based in Port-of-Spain, Trinidad & Tobago. We offer convenient, affordable rentals with top-notch service. Whether you're a visitor or local, enjoy your journey in comfort and style with our trusted fleet.</p>
+  </div>
+</section>
+
+<!-- Fleet Section -->
+<section id="fleet" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Fleet</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="https://images.unsplash.com/photo-1602872031812-671b7bcd48ab?auto=format&fit=crop&w=800&q=80" class="w-full h-60 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Nissan Tiida (Blue‑Black)</h3>
+          <p class="text-gray-600 mb-2">Automatic • 5 Seats • A/C • Bluetooth</p>
+          <span class="text-coral font-bold text-lg">$55/day</span>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="https://images.unsplash.com/photo-1603981196314-0dcea8209466?auto=format&fit=crop&w=800&q=80" class="w-full h-60 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Nissan Tiida (Grey)</h3>
+          <p class="text-gray-600 mb-2">Automatic • 5 Seats • A/C • Bluetooth</p>
+          <span class="text-coral font-bold text-lg">$55/day</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="py-20 bg-gradient-to-b from-teal-100 to-white">
+  <div class="max-w-xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-primary text-center mb-10">Book Now</h2>
+    <form action="https://formspree.io/f/xanjvgbd" method="POST" onsubmit="showOverlay()" class="bg-white p-6 rounded-2xl shadow-xl space-y-4">
+      <input type="hidden" name="_redirect" value="https://kyrese113.github.io/Alpha-Car-Rentals/thank-you.html">
+      <div>
+        <label class="block mb-1 font-medium">Name</label>
+        <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg p-3" />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Email</label>
+        <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3" />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Pick‑up Date</label>
+        <input type="date" name="pickup_date" required class="w-full border border-gray-300 rounded-lg p-3" />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Return Date</label>
+        <input type="date" name="return_date" required class="w-full border border-gray-300 rounded-lg p-3" />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Message</label>
+        <textarea name="message" rows="4" class="w-full border border-gray-300 rounded-lg p-3"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-teal-700 font-semibold shadow-md">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Confirmation Overlay -->
 <div id="success-overlay" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
   <div class="bg-white p-8 rounded-2xl shadow-2xl text-center">
     <h2 class="text-2xl font-bold text-primary mb-2">Booking Sent!</h2>
@@ -36,113 +119,11 @@
   </div>
 </div>
 
-<script>
-  function redirectToThankYou(event) {
-    event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(resp => {
-      if (resp.ok) {
-        document.getElementById('success-overlay').classList.remove('hidden');
-        setTimeout(() => { window.location.href = 'thank-you.html'; }, 2000);
-      } else {
-        alert('There was a problem submitting the form.');
-      }
-    })
-    .catch(() => alert('There was an error submitting the form.'));
-  }
-</script>
-
-<body class="font-tropical bg-gradient-to-br from-yellow-50 via-white to-teal-50 text-gray-900">
-
-<!-- Navbar -->
-<nav class="sticky top-0 z-50 bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-    <a href="#" class="text-2xl font-bold text-primary">Alpha Majestic</a>
-    <div class="space-x-6 hidden md:flex">
-      <a href="#cars" class="hover:text-primary font-medium">Cars</a>
-      <a href="#about" class="hover:text-primary font-medium">About</a>
-      <a href="#contact" class="hover:text-primary font-medium">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="relative py-20 bg-gradient-to-r from-teal-500 via-coral to-golden text-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h1 class="text-5xl font-extrabold mb-4 drop-shadow">Cruise the Island in Style</h1>
-    <p class="text-xl mb-6 max-w-2xl mx-auto">Experience the freedom of Trinidad & Tobago with Alpha Majestic’s reliable, affordable car rentals.</p>
-    <a href="#contact" class="bg-white text-teal-600 font-bold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-100 transition">Book Your Ride</a>
-  </div>
-</section>
-
-<!-- Cars -->
-<section id="cars" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10 text-primary">Our Island Fleet</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-      <!-- Car 1 -->
-      <div class="bg-yellow-50 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition">
-        <img src="https://images.unsplash.com/photo-1602872031812-671b7bcd48ab?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Nissan Tiida (Blue‑Black)</h3>
-          <p class="text-gray-700 mb-2">Automatic • 5 seats • A/C • Bluetooth</p>
-          <p class="text-lg font-bold text-coral">$55/day</p>
-        </div>
-      </div>
-      <!-- Car 2 -->
-      <div class="bg-yellow-50 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition">
-        <img src="https://images.unsplash.com/photo-1603981196314-0dcea8209466?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Nissan Tiida (Grey)</h3>
-          <p class="text-gray-700 mb-2">Automatic • 5 seats • A/C • Bluetooth</p>
-          <p class="text-lg font-bold text-coral">$55/day</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about" class="bg-gradient-to-b from-teal-100 to-white py-16">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-primary mb-4">About Us</h2>
-    <p class="max-w-3xl mx-auto text-gray-800">Born in the heart of Port-of-Spain, Alpha Majestic Car Rentals was created to bring convenience and affordability to locals and travelers alike. Whether you're cruising to Maracas or taking care of business, we’ve got your ride ready.</p>
-  </div>
-</section>
-
-<!-- Contact -->
+<!-- Contact Section -->
 <section id="contact" class="py-16 bg-white">
-  <div class="max-w-xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-primary mb-8">Book Now</h2>
-    <form action="https://formspree.io/f/xanjvgbd" method="POST" class="space-y-4 text-left" onsubmit="return redirectToThankYou(event)">
-      <div>
-        <label class="block mb-1 font-medium">Name</label>
-        <input type="text" name="name" class="w-full border border-gray-300 rounded-lg p-3" required />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Email</label>
-        <input type="email" name="_replyto" class="w-full border border-gray-300 rounded-lg p-3" required />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Pick‑up Date</label>
-        <input type="date" name="pickup_date" class="w-full border border-gray-300 rounded-lg p-3" required />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Return Date</label>
-        <input type="date" name="return_date" class="w-full border border-gray-300 rounded-lg p-3" required />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Message</label>
-        <textarea name="message" rows="4" class="w-full border border-gray-300 rounded-lg p-3"></textarea>
-      </div>
-      <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-teal-700 transition font-semibold shadow-lg">Submit</button>
-    </form>
+  <div class="max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
+    <p class="text-gray-700">For questions or special requests, reach out via Instagram or WhatsApp once we go live on those platforms!</p>
   </div>
 </section>
 
@@ -153,27 +134,12 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  function redirectToThankYou(event) {
-    event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(resp => {
-      if (resp.ok) {
-        window.location.href = 'thank-you.html';
-      } else {
-        alert('There was a problem submitting the form.');
-      }
-    })
-    .catch(() => alert('There was an error submitting the form.'));
+  function showOverlay() {
+    document.getElementById('success-overlay').classList.remove('hidden');
   }
 </script>
 
 </body>
 </html>
+
 
