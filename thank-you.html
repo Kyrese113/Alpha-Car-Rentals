@@ -3,39 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Alpha Majestic Car Rentals</title>
-  <!-- Tailwind CDN -->
+  <title>Alpha Majestic Car Rentals</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#10b981', // Teal
+            primary: '#10b981',
             coral: '#f97316',
             golden: '#facc15',
           },
           fontFamily: {
-            tropical: ['Poppins', 'sans‑serif'],
-          },
-        },
-      },
-    };
+            tropical: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="font-tropical bg-gradient-to-br from-teal-500 via-coral to-golden min-h-screen flex items-center justify-center px-4">
+<body class="font-tropical bg-white text-gray-800">
+
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-100 via-white to-yellow-50 px-6">
   <div class="bg-white rounded-3xl shadow-2xl p-10 max-w-lg w-full text-center">
     <svg class="mx-auto h-20 w-20 text-primary mb-6" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
       <path d="M9 12l2 2l4 -4" />
       <circle cx="12" cy="12" r="10" />
     </svg>
-    <h1 class="text-4xl font-extrabold text-primary mb-4">Thank You!</h1>
-    <p class="text-gray-700 text-lg mb-8">We’ve received your booking request and will get back to you shortly.<br>Ready to hit the road with Alpha Majestic!</p>
-    <a href="index.html" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition">Back to Home</a>
+    <h1 class="text-4xl font-extrabold text-primary mb-4">Thank You for Booking!</h1>
+    <p class="text-gray-700 text-lg mb-6">We’ve received your request. One of our representatives will reach out to confirm your reservation shortly. We look forward to serving you!</p>
+    <a href="index.html" class="inline-block bg-primary hover:bg-teal-700 transition text-white px-8 py-3 rounded-full font-semibold shadow-lg">Back to Home</a>
   </div>
+</section>
+
 </body>
 </html>
